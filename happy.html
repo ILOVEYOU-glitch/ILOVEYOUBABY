@@ -96,6 +96,9 @@ She likes to sit in cars while I like to drive em<br>
     </div>
     <hr>
     <div>
+        <h1>wait 3secs for audio</h1>
+        <button id="playButton">Play Audio</button><br>
+
         <img id="libig" src="./WhatsApp Image 2024-12-03 at 6.24.31 PM.jpeg"/><br>
         <img id="libig" src="./WhatsApp Image 2024-12-03 at 6.30.41 PM.jpeg"/>
     </div>
@@ -111,6 +114,15 @@ She likes to sit in cars while I like to drive em<br>
     <h3>@parashuram production All rights reserved 2024</h3>
 </body>
 <script>
+    const playButton = document.getElementById("playButton");
+
+
+const audio = new Audio("./Recording (2).m4a");
+
+
+playButton.addEventListener("click", () => {
+    audio.play();
+});
     const button = document.getElementById("confettiButton");
 
 
