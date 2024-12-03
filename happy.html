@@ -12,6 +12,7 @@
         background-color:deeppink;
         color:white;
        
+       
     }
     li{
         text-decoration: none;
@@ -28,15 +29,41 @@
         margin-top: 10px;
 
     }
+    @keyframes rotate {
+        0%{
+            transform:rotate(0deg);
+        }
+        100%{
+            transform:rotate(360deg);
+        }
+    }
+    @keyframes fadein{
+        0%{
+            opacity:0;
+        }
+        100%{
+            opacity:1;
+        }
+    }
+    #love{
+        opacity:0;
+    }
     
 </style>
 <body>
     <h1>Happy Birthday Babyyyyy</h1>
+    <hr>
     <button onclick="wish()">Click me for wishes</button><br>
-    <img src="./happybirthday.jpg"/><br>
-    <img src="./love.jpg"/>
+    <img src="./happybirthday.jpg" id="bear"/><br>
+    <button onclick="love()">click here for love</button><br>
+    <img src="./love.jpg" id="love"/>
     <h2>Nee gifts:</h2>
-    <a href="https://iloveyou-glitch.github.io/ILOVEYOUBABY/sweater.html">CLICK ME</a>
+    <a href="https://iloveyou-glitch.github.io/ILOVEYOUBABY/sweater.html">CLICK ME</a><br>
+    <hr>
+    <h4>In case you dont like pink</h4>
+    <input id="namee" type="text" placeholder="enter color"/>
+    <button onclick="change()">Change Color</button>
+    <hr>
     <div id="main">
         <div id="box">
     <H3>List of reasons I love you</H3>
@@ -63,14 +90,18 @@ She likes to sit in cars while I like to drive em<br>
        
     </p></div>
     </div>
+    <hr>
     <div>
         <img id="libig" src="./WhatsApp Image 2024-12-03 at 6.24.31 PM.jpeg"/><br>
         <img id="libig" src="./WhatsApp Image 2024-12-03 at 6.30.41 PM.jpeg"/>
     </div>
+    <hr>
     <h3>A Scrap Book For You</h3>
     <img src="./WhatsApp Image 2024-12-03 at 6.38.34 PM.jpeg" id="libig">
+    <hr>
     <h5>I REALLY REALLY LOVE YOU !!</h5>
     <img src="./happpy.png"/>
+    <hr>
     <h2>Our song</h2>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/BmUe3-sfr7E?si=Eroq24fL6ZaKRG_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <h3>@parashuram production All rights reserved 2024</h3>
@@ -80,8 +111,23 @@ She likes to sit in cars while I like to drive em<br>
 
     window.alert("HAPPY BIRTHDAY DARLING");
     console.log("LOVEDAY");
+    let bear=document.getElementById("bear");
+    bear.style.animation="rotate 5s linear";
+    console.log("rotate");
+    
 
 
+    }
+    function change(){
+        let body=document.getElementsByTagName("body")[0];
+        let col=document.getElementById("namee").value;
+        body.style.backgroundColor=col.toLowerCase();
+        body.style.color="black";
+    }
+    function love(){
+          let lovee=document.getElementById("love");
+          lovee.style.animation="fadein 5s linear "
+          lovee.style.opacity=1;
     }
 </script>
 </html>
