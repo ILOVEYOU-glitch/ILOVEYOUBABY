@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>HAPPY BIRTHDAY DARLING</title>
+
 </head>
 <style>
     body{
@@ -50,9 +52,15 @@
     #love{
         opacity:0;
     }
+    #bodyy{
+        display:none;
+    }
     
 </style>
-<body>
+<body><div id="login"> 
+    <input type="text" id="pass" placeholder="enter password"/>
+    <button onclick="login()">Login</button></div>
+    <div id="bodyy">
     <h1>Happy Birthday Babyyyyy</h1>
     <button id="confettiButton">Celebrate!</button>
 
@@ -111,7 +119,7 @@ She likes to sit in cars while I like to drive em<br>
     <hr>
     <h2>Our song</h2>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/BmUe3-sfr7E?si=Eroq24fL6ZaKRG_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <h3>@parashuram production All rights reserved 2024</h3>
+    <h3>@parashuram production All rights reserved 2024</h3></div>
 </body>
 <script>
     const playButton = document.getElementById("playButton");
@@ -156,6 +164,18 @@ button.addEventListener("click", () => {
           let lovee=document.getElementById("love");
           lovee.style.animation="fadein 5s linear "
           lovee.style.opacity=1;
+    }
+    function login(){
+        event.preventDefault();
+        let pass=document.getElementById("pass").value;
+        if(pass==="KASOOR"){
+        let bodyy=document.getElementById("bodyy");
+        let login=document.getElementById("login");
+        login.style.display="none";
+        bodyy.style.display="block";}
+        else{
+            window.alert("LANJA");
+        }
     }
 </script>
 </html>
